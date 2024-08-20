@@ -1,0 +1,2091 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+/* Start Common Css */
+:root {
+  --green: #43686a;
+  --gray: #738485;
+  --bgGray: #ebf0f1;
+  --bgGreen: #05a1ab;
+  --white: #ffffff;
+  --black: #000000;
+  --greenPure: #05a1ab;
+  --greenFade: #93afb1;
+  --fadeBlack: #282828;
+  --greenFade2: #e5f5f7;
+  --red: #ff4040;
+}
+.fw-500 {
+  font-weight: 500 !important;
+}
+.fw-600 {
+  font-weight: 600 !important;
+}
+.fw-700 {
+  font-weight: 700 !important;
+}
+ul {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none !important;
+}
+.cursor {
+  cursor: pointer;
+}
+li {
+  list-style: none;
+}
+.heading12 {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--fadeBlack);
+}
+.heading16 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--fadeBlack);
+}
+.heading16Green {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--green);
+}
+.heading20 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--fadeBlack);
+}
+.headingGreen20 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--green);
+}
+.heading24 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--green);
+}
+.heading30 {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--greenPure);
+  margin-bottom: 0;
+}
+.text14 {
+  font-size: 14px;
+  color: var(--gray);
+}
+.text14Fade {
+  font-size: 14px;
+  color: var(--greenFade);
+  font-weight: 400;
+}
+.text14Green {
+  font-size: 14px;
+  color: var(--green);
+  font-weight: 400;
+}
+.text12 {
+  font-size: 12px;
+  color: var(--greenFade);
+  font-weight: 400;
+}
+.txt12 {
+  font-size: 12px !important;
+  color: var(--greenFade) !important;
+  font-weight: 400 !important;
+}
+/* End Common Css */
+/* Start Scrollbar Css */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--greenPure);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+/* End Scrollbar Css */
+/* Start Sidebar Css */
+.sidebarOuter {
+  background: var(--bgGreen);
+  border-radius: 0 15px 15px 0;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  max-width: 210px;
+  /* margin-right: 15px; */
+  position: fixed;
+}
+.sidebarArrow {
+  width: 26px;
+  height: 36px;
+  border-radius: 0 10px 10px 0;
+  position: absolute;
+  right: -25px;
+  top: 30px;
+  background-color: var(--bgGreen);
+  text-align: center;
+  padding-block: 4px;
+}
+.sidebarLogo {
+  padding: 33px 0 27px 0;
+  text-align: center;
+  border-bottom: 1px solid #ffffff36;
+}
+.sidebarInner {
+  padding: 20px;
+  overflow-y: auto;
+  height: 100vh;
+  padding-bottom: 92px;
+}
+.sidebarList {
+  padding: 0 !important;
+}
+.sidebarItem {
+  background: rgba(255, 255, 255, 0.17);
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.sidebarIcon {
+  margin-right: 10px;
+}
+.sidebarTxt {
+  font-weight: 600;
+  color: var(--white);
+  font-size: 14px;
+}
+.sidebarItem.active {
+  background: #fff;
+}
+.sidebarItem.active .sidebarTxt {
+  color: var(--bgGreen);
+}
+.logOutBtn {
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+.logOutBtn img {
+  margin-right: 10px;
+}
+.logOutBtn span {
+  font-weight: 600;
+  color: #54d9e1;
+  font-size: 14px;
+}
+/* End Sidebar Css */
+/* Start Navbar Css */
+.navbar {
+  padding: 25px 15px 25px 24px !important;
+  border-bottom: 1px solid #e8e8e8;
+}
+.navList {
+  margin-bottom: 0;
+}
+.navList .dropdown-menu {
+  min-width: 127px;
+}
+.navList .dropdown-menu .dropdown-item {
+  color: red;
+}
+.navList li {
+  display: inline-block;
+  margin-right: 15px;
+}
+.navList li:last-child {
+  margin-right: 0px;
+}
+.navChat {
+  width: 30px;
+  height: 30px;
+  background: #ffbb00;
+  border-radius: 30px;
+  text-align: center;
+}
+.navNotification {
+  width: 30px;
+  height: 30px;
+  background: #50bec5;
+  border-radius: 30px;
+  text-align: center;
+}
+.assignShiftBtn {
+  color: var(--white);
+  background: linear-gradient(94.43deg, #f7701f 0.93%, #facb58 95.43%);
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 31px 32px;
+  position: relative;
+  text-align: center;
+}
+.shiftImg1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.shiftImg2 {
+  position: absolute;
+  left: 7rem;
+  bottom: 5px;
+}
+.shiftImg3 {
+  position: absolute;
+  right: 3px;
+  top: 11px;
+}
+.profileBtn {
+  border: 1px solid var(--greenPure);
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: var(--greenPure);
+  padding: 10px 20px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* End Navbar Css */
+/* Start Dashboard Page */
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+.userList {
+  height: 100%;
+  overflow: auto;
+  max-height: 100px;
+  position: absolute;
+  background: #fff;
+  z-index: 2;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--bgGreen);
+  font-size: 14px;
+  width: 90%;
+}
+.dashboard-items {
+  height: calc(100vh - 310px);
+  overflow: auto;
+}
+.sidebarClose .sidebarTxt {
+  display: none;
+}
+.sidebarClose .logOutBtn span {
+  display: none;
+}
+.sidebarClose .sidebarOuter {
+  max-width: 90px;
+}
+.sidebarClose .contentMain {
+  width: calc(100vw - 128px) !important;
+  margin-left: 111px;
+}
+.sidebarClose .leftArrow {
+  transform: rotate(180deg);
+}
+.mainOuter {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+}
+.contentMain {
+  width: calc(100vw - 250px) !important;
+  margin-left: 233px;
+}
+.dashboardCard {
+  box-shadow: 0px 8px 30px 0px #00000026;
+  border-radius: 15px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.arrowShape {
+  position: absolute;
+  bottom: 14px;
+  right: 0;
+}
+.dashboardImg {
+  background: #ff9c0f;
+  padding: 15px 16px;
+  border-radius: 16.41px;
+  margin-right: 10px;
+}
+.dashboardTxt .heading30 {
+  color: var(--black);
+}
+.dashboardTxt .heading12::before {
+  content: "";
+  width: 49px;
+  height: 1px;
+  position: absolute;
+  background: #e8e8e8;
+  top: 34px;
+}
+.supervisor {
+  background-color: #4d4fb2;
+}
+.employees {
+  background: #42aefb;
+}
+.shifts {
+  background: #ff520b;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 10px;
+}
+.allLogsFilter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.recentLog {
+  font-size: 14px;
+  color: var(--greenFade);
+  font-weight: 600;
+}
+.dashboardData {
+  padding-block: 22px;
+  border-bottom: 1px solid var(--bgGray);
+}
+.dashFilter {
+  position: relative;
+}
+.dashFilterBtn {
+  border: 1px solid var(--bgGreen);
+  background: transparent;
+  color: var(--bgGreen);
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+.filterOuter {
+  box-shadow: 0px 10px 30px 0px #00000040;
+  padding: 21px 15px;
+  border-radius: 10px;
+  width: 100%;
+  min-width: 316px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  background: #fff;
+  margin-top: 10px;
+}
+.filterFormOuter {
+  border-radius: 10px;
+  background: #f4f6f6;
+  padding: 10px;
+  position: relative;
+}
+.filterLabel {
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--green);
+  margin-bottom: 0;
+}
+.searchIcon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.filterInput {
+  border: none !important;
+  background: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+  font-size: 14px;
+  color: var(--bgGreen);
+}
+.filterInput::placeholder {
+  font-weight: 400;
+  font-size: 14px !important;
+  color: var(--green) !important;
+}
+.filterSearchList {
+  height: 100%;
+  max-height: 50px;
+  overflow-y: auto;
+}
+.filterSelect {
+  width: 100% !important;
+  background-color: transparent;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  font-size: 14px;
+  appearance: none;
+  background: url(./../utilities/images/selectDownArrow1.svg) !important;
+  background-position: 100% 100%;
+  background-position: right !important;
+  font-size: 14px;
+  color: var(--green);
+  background-repeat: no-repeat !important;
+  filter: brightness(0) saturate(100%) invert(54%) sepia(8%) saturate(510%)
+    hue-rotate(135deg) brightness(91%) contrast(90%) !important;
+}
+.filterFormOuter .react-datepicker-wrapper {
+  display: block !important;
+}
+.filterFormOuter .react-datepicker-ignore-onclickoutside {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+.filterFormOuter .react-datepicker__input-container input {
+  border: none !important;
+  background-color: transparent;
+  width: 100%;
+  padding-left: 20px;
+  color: var(--green);
+  font-size: 14px;
+}
+.calanderIcon {
+  position: absolute;
+  left: 11px;
+  bottom: 15px;
+}
+.clearFilter {
+  background: var(--green);
+  border-radius: 15px;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  padding: 10px;
+  width: 100%;
+}
+.applyFilter {
+  background: var(--bgGreen);
+  border-radius: 15px;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  padding: 10px;
+  width: 100%;
+}
+.filterSearch {
+  padding-right: 28px !important;
+}
+.filterFormLast .react-datepicker-popper {
+  transform: translate(-104px, -239px) !important;
+}
+.react-datepicker__input-container input:focus {
+  outline: none !important;
+}
+.filterSearchList .searchList {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: disc !important;
+}
+.filterSearchList .heading12 {
+  color: var(--green);
+}
+/* End Dashboard Page */
+/* Start Shift Request  */
+.shiftRequestFilter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.commonTable {
+  width: 100%;
+}
+.tableHeading {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--green);
+  padding-block: 18px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.requestForBtn {
+  background-color: var(--greenFade2);
+  color: var(--bgGreen);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 10px !important;
+  border-radius: 10px;
+  border: none;
+}
+.assignToSelectBtn {
+  background-color: var(--bgGreen);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 40px;
+  border-radius: 10px;
+  border: none;
+}
+.assignToRejectBtn {
+  background-color: var(--gray);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 40px;
+  border-radius: 10px;
+  border: none;
+}
+.commonHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px 15px 0;
+}
+.hospitalDetail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.backArrowBtn {
+  width: 32px;
+  height: 32px;
+  background: rgba(147, 175, 177, 0.2);
+  text-align: center;
+  border-radius: 10px;
+  padding-block: 3px;
+}
+.hospitalDetailOuter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hospitalDetailText .heading16 {
+  margin-bottom: 0;
+  font-weight: 600;
+  color: var(--green);
+}
+.hospitalDetailText .text14 {
+  margin-bottom: 0;
+  color: var(--greenFade);
+}
+.editBtnRounded {
+  border: 1px solid var(--bgGreen);
+  background: transparent;
+  color: var(--bgGreen);
+  border-radius: 15px;
+  padding: 10px 17px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.deleteBtnRounded {
+  border: 1px solid var(--red);
+  background: transparent;
+  color: var(--red);
+  border-radius: 15px;
+  padding: 10px 17px;
+  font-weight: 500;
+}
+.nurseDetailOuter {
+  background-color: #ebf6f6;
+  padding: 6px 15px 6px 6px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 10px;
+}
+.nurseDetailIconOuter {
+  background: #ffffff;
+  width: 52px;
+  height: 55px;
+  text-align: center;
+  padding-block: 11px;
+  border-radius: 8px;
+}
+.nurseTag {
+  background-color: var(--white);
+  color: var(--greenPure);
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 6px 20px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.nurseDetailText .text14 {
+  color: var(--greenFade);
+  margin-bottom: 0;
+}
+.requestCommonDate {
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 500;
+}
+.requestCreateCommon {
+  border-bottom: 1px solid #e8e8e8;
+  padding-block: 13px;
+}
+.requestCreateCommon .text14 {
+  color: var(--greenFade);
+}
+.scheduleRequestCommon {
+  display: inline-block;
+  margin-left: 20px;
+}
+.shiftReqDescription .text14 {
+  color: var(--greenFade);
+}
+.shiftReqDescription {
+  background: #f4f6f6;
+  padding: 15px 11px;
+  border-radius: 10px;
+}
+.commonBtnFill {
+  border: 1px solid var(--greenPure);
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: var(--greenPure);
+  padding: 10px 20px;
+  color: var(--white);
+}
+.commonBtnCancel {
+  border: 1px solid var(--red);
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: transparent;
+  padding: 10px 20px;
+  color: var(--red);
+}
+/* End Shift Request */
+/* Start Customer Css */
+.customerSearchInput {
+  border: 1px solid #c2d5d7;
+  padding: 10px 37px;
+  border-radius: 30px;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.customerSearchInput::placeholder {
+  font-size: 12px;
+  color: #bed5d7;
+}
+.customerSearch {
+  position: relative;
+}
+.customerSearchIcon {
+  position: absolute;
+  left: 11px;
+  top: 11px;
+}
+.customerCrossIcon {
+  position: absolute;
+  right: 17px;
+  top: 14px;
+  border-left: 1px solid var(--greenFade2);
+  padding-left: 8px;
+  width: 20px;
+  height: 20px;
+}
+.customerOuter .assignToSelectBtn {
+  padding: 10px 23px;
+  border-radius: 24px;
+}
+.customerNameImg {
+  display: flex;
+  align-items: center;
+}
+.customerImg {
+  width: 33px;
+  height: 33px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.customerDetailOuter {
+  background-color: #ebf6f6;
+  padding: 19px 15px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.customerDetailIconOuter img {
+  width: 55px;
+  height: 55px;
+  border-radius: 5px;
+}
+.customerDetailLeft {
+  display: flex;
+  gap: 11px;
+}
+.customerDetailText .heading16 {
+  color: var(--green);
+  font-weight: 600;
+}
+.customerLocationIcon {
+  width: 18px;
+  height: 18px;
+  margin-right: 7px;
+}
+.customerOuter td:first-child {
+  word-break: break-all;
+  width: 30%;
+  padding-right: 40px;
+}
+
+.customerOuter td {
+  width: 20%;
+}
+.customerOuter {
+  height: 100%;
+  max-height: calc(100% - 99px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.allCustomerHeading {
+  color: var(--green);
+}
+.customerTable .blockImg {
+  width: 18px;
+  filter: brightness(0) saturate(100%) invert(32%) sepia(9%) saturate(10%)
+    hue-rotate(16deg) brightness(96%) contrast(97%);
+}
+/* start customer view css */
+.customerViewTable {
+  padding-left: 20px;
+}
+/* .customerViewTable .commonTable{
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+} */
+
+/* .customerViewTable .tableHeading{
+    border-top: 1px solid #ebebeb;
+} */
+
+.customerViewTable .customerNameImg .heading16 {
+  color: var(--green);
+}
+
+.customerViewTable .customeViewScheduleHeading {
+  color: var(--greenFade);
+}
+
+.customerViewTable .customerViewRoleBtn {
+  border: none;
+  border-radius: 10px;
+  background: var(--greenFade2);
+  color: var(--greenPure);
+  padding: 11px 19px 11px 18px;
+}
+/* End Customer View Css */
+/* Start Edit Customer Profile*/
+.editCustomerProfile {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+}
+.editCustomerProfile .heading14 {
+  color: var(--greenFade);
+  font-weight: 600;
+}
+.editCustomerProfile .heading12 {
+  color: var(--greenFade);
+}
+.customerProfileImg {
+  border: 2.5px solid var(--greenPure);
+  border-radius: 50px;
+  width: 99px;
+  height: 99px;
+  object-fit: cover;
+}
+.editCustomerProfile .pencilImg {
+  background-color: var(--greenPure);
+  width: 38px;
+  height: 38px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid var(--white);
+  position: absolute;
+  bottom: -3px;
+  right: -8px;
+}
+.customerInput {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.editProflePara .heading14:first-child {
+  color: var(--green);
+}
+.editProfileInputOuter {
+  position: relative;
+  display: flex;
+}
+.editProfileInputOuter .filterInput {
+  padding-left: 6px;
+  color: var(--bgGreen);
+}
+.editProfileForm .text12 {
+  color: var(--green);
+  font-weight: 500;
+}
+.editProfileForm .shiftReqDescription {
+  padding: 7px 15px;
+}
+.editSkilsBtnInner .profileBtn {
+  border: none;
+}
+.crossSkill {
+  display: flex;
+  align-items: center;
+}
+/* End Edit Customer Profile*/
+/* Start Pagination Css */
+.pagination {
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  padding-top: 10px;
+}
+.pagination .selected {
+  background: var(--white);
+  color: var(--bgGreen);
+  border-radius: 9px;
+  padding: 2px 10px;
+  border: 1px solid var(--bgGreen);
+}
+.pagination a {
+  color: var(--bgGreen);
+}
+.pagination li {
+  color: var(--greenFade);
+  background: var(--white);
+  border-radius: 9px;
+  padding: 2px 10px;
+  border: 1px solid var(--white);
+}
+/* End Pagination Css */
+/* Start Loader Css */
+
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.lds-roller {
+  display: inline-block;
+  height: 64px;
+  width: 64px;
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 32px 32px;
+
+    &:after {
+      position: absolute;
+      display: block;
+      background: var(--bgGreen);
+      border-radius: 50%;
+      content: " ";
+      margin: -3px 0 0 -3px;
+      height: 6px;
+      width: 6px;
+    }
+
+    &:nth-child(1) {
+      animation-delay: -0.036s;
+
+      &:after {
+        top: 50px;
+        left: 50px;
+      }
+    }
+
+    &:nth-child(2) {
+      animation-delay: -0.072s;
+
+      &:after {
+        top: 54px;
+        left: 45px;
+      }
+    }
+
+    &:nth-child(3) {
+      animation-delay: -0.108s;
+
+      &:after {
+        top: 57px;
+        left: 39px;
+      }
+    }
+
+    &:nth-child(4) {
+      animation-delay: -0.144s;
+
+      &:after {
+        top: 58px;
+        left: 32px;
+      }
+    }
+
+    &:nth-child(5) {
+      animation-delay: -0.18s;
+
+      &:after {
+        top: 57px;
+        left: 25px;
+      }
+    }
+
+    &:nth-child(6) {
+      animation-delay: -0.216s;
+
+      &:after {
+        top: 54px;
+        left: 19px;
+      }
+    }
+
+    &:nth-child(7) {
+      animation-delay: -0.252s;
+
+      &:after {
+        top: 50px;
+        left: 14px;
+      }
+    }
+
+    &:nth-child(8) {
+      animation-delay: -0.288s;
+
+      &:after {
+        top: 45px;
+        left: 10px;
+      }
+    }
+  }
+}
+/* End Loader Css */
+/* Start Employee Page CSS */
+.employeesHeader {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.employeesBtn {
+  background: var(--bgGreen);
+  box-shadow: 0px 10px 30px 0px #19c3ce4d;
+  border: 1px solid var(--bgGreen);
+  border-radius: 15px;
+}
+.employeeAllBtn {
+  background: transparent;
+  border: none;
+  color: var(--white);
+  width: 100vh;
+  max-width: 126px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 5px;
+}
+.employeeAllBtn.active {
+  background: var(--white);
+  color: var(--bgGreen);
+}
+.employTable .heading16 {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--green);
+  display: inline-block;
+  width: 133px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+.employTable .employRoleBtn {
+  color: var(--bgGreen);
+  border-radius: 15px;
+  padding: 7px 10px;
+  margin: 2px 2px;
+}
+.employTable .employSendBtn {
+  padding: 7px 16px;
+  border-radius: 15px;
+}
+.permissionText {
+  padding-left: 6px;
+}
+.employTable .blockImg {
+  width: 18px;
+  filter: brightness(0) saturate(100%) invert(32%) sepia(9%) saturate(10%)
+    hue-rotate(16deg) brightness(96%) contrast(97%);
+}
+.unlockIcon {
+  padding: 4px 0px 0px 15px;
+  font-size: 17px;
+  cursor: pointer;
+}
+/* End Employee Page CSS */
+/* Start Supervisior Page CSS */
+.supervisorTable .heading16 {
+  color: var(--green);
+}
+.supervisorTable .customerImg {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+/* End Supervisor Page CSS */
+/* Start Supervisor Details Page CSS */
+.supervisorDetailOuter .customerDetailLeft {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+}
+.supervisorDetailOuter .nurseDetailOuter {
+  background-color: transparent;
+  border-bottom: 1px solid #e8e8e8;
+  padding-block: 13px;
+  border-radius: 0px;
+  width: 100%;
+}
+.supervisorDetailOuter .nurseTag {
+  background-color: var(--greenFade2);
+  padding: 3px 10px;
+}
+.supervisorDetailOuter .nurseDetailIconOuter .rolesImg {
+  color: transparent;
+  background: var(--bgGreen);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+.supervisorDetailOuter .nurseDetailIconOuter {
+  padding-block: 4px;
+}
+.sendNotificationSupervisor {
+  width: 30%;
+}
+.nameSupervisor {
+  word-break: break-all;
+  width: 32%;
+  padding-right: 20px;
+}
+.actionSupervisor {
+  width: 20%;
+}
+.employPersonalJobSlider .heading16 {
+  color: var(--greenFade);
+  display: flex;
+  display: flex;
+  gap: 70px;
+}
+.skillList .heading14 {
+  color: var(--greenFade);
+}
+
+.skillList ul {
+  padding-left: 19px;
+  line-height: 35px;
+  color: var(--green);
+}
+.skillList li {
+  list-style-type: disc;
+  color: var(--green);
+}
+.skillUnorderedList .heading14 {
+  color: var(--green);
+}
+.employDetailDescription .employdescriptionHeading {
+  color: var(--greenFade) !important;
+}
+
+.employDetailDescription .employdescriptionPara {
+  color: var(--green);
+}
+.supervisorRight {
+  display: flex;
+  gap: 15px;
+  padding-right: 10px;
+}
+.certificate .heading14 {
+  color: var(--greenFade);
+}
+.certificateBtn {
+  background: var(--white);
+  border: none;
+  border-radius: 10px;
+  padding: 23px 36px 24px 7px;
+  box-shadow: 0px 10px 25px 0px #00000026;
+  columns: var(--green) !important;
+}
+.documentImg {
+  background-color: #e5f5f7;
+  padding: 15px 12px;
+  border-radius: 10px;
+  display: inline;
+}
+.certificateCollections {
+  display: flex;
+  gap: 20px;
+}
+.certificateText {
+  padding-left: 13px;
+}
+.employPersonalJobSlider {
+  display: flex;
+  gap: 79px;
+}
+.employPersonalBtn {
+  cursor: pointer;
+}
+.employPersonalBtn.active {
+  color: var(--green);
+  border-bottom: 2px solid var(--green);
+}
+.jobInfo thead tr th {
+  color: var(--greenFade);
+}
+.roleText {
+  padding-left: 10px;
+  font-weight: 400;
+  color: var(--green) !important;
+}
+.jobInfoUser {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.jobInfoUser .heading16 {
+  color: var(--green);
+}
+.role .heading14 {
+  color: var(--greenFade);
+}
+.employTable .tableHeading:nth-child(3) {
+  width: 20%;
+}
+/* End Supervisor Details Page CSS */
+/* Start Supervisor Permission Page CSS */
+.createSitePermission {
+  background-color: var(--greenFade2);
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.createSiteText {
+  color: var(--bgGreen);
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 58px;
+  height: 28px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--greenFade);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: var(--bgGreen);
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--bgGreen);
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+/* End Supervisor Permission Page CSS */
+/* Start Add Suoervisor Modal CSS */
+.addSupervisorModal .pencilImg {
+  background-color: var(--greenPure);
+  width: 38px;
+  height: 38px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid var(--white);
+  position: absolute;
+  bottom: -3px;
+  right: 38%;
+}
+.addSupervisorModal .heading24 {
+  text-align: center;
+}
+.addSupervisorModal .profileBtn {
+  padding: 10px 50px;
+}
+.supervisorDetailUser {
+  border: 2.5px solid var(--greenPure);
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  max-width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.userProfileImg {
+  color: transparent;
+  object-fit: cover;
+  width: 97px;
+  height: 97px;
+  border-radius: 50px;
+  padding: 2px;
+}
+/* End Add Suoervisor Modal CSS */
+/* Start Hours Log Page CSS */
+.hoursLog .heading16 {
+  color: var(--green);
+}
+.hoursLogTable .commonTable {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+/* .hoursLogTable .tableHeading{
+  border-top: 1px solid #e8e8e8;
+} */
+
+/* Start Send Notification CSS */
+.textArea {
+  background-color: #f4f6f6;
+  border-radius: 10px;
+  color: var(--gray);
+  border: none;
+  resize: none;
+  padding: 15px 15px;
+}
+.notificationModal .profileBtn {
+  padding: 10px 36px;
+}
+.textArea:focus {
+  outline: none;
+}
+#notification .modal-content {
+  height: 352px !important;
+  max-width: 486px !important;
+  border-radius: 15px !important;
+}
+/* Start Send Notification CSS */
+/* Start Edit Skills Page CSS */
+.editSkill .editBtnRounded {
+  padding: 12px 36px;
+}
+.selectRoleList .heading14 {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.selectRoleList ul {
+  padding-left: 19px;
+  line-height: 35px;
+  color: var(--green);
+}
+.skillUnorderedList .heading14 {
+  list-style-type: disc;
+  color: var(--green);
+  font-weight: 400;
+}
+.skillsBtn {
+  display: flex;
+}
+.skillsBtn .clearFilter {
+  display: inline-block;
+  padding: 12px 43px;
+}
+.editSkillsTextarea {
+  background-color: transparent;
+  border: none;
+  color: var(--bgGreen);
+  resize: none;
+}
+.editSkillsTextarea:focus {
+  outline: none;
+}
+.swalCustom .swal-modal {
+  border-radius: 20px !important;
+}
+/* End Edit Skills Page CSS */
+/* Start Job Page CSS */
+.jobTable .calenderImg {
+  width: 14px;
+}
+.jobTable .locationImg {
+  width: 19px;
+}
+.jobTable .loactionHeading {
+  width: 18%;
+}
+.jobTable td:first-child {
+  word-break: break-all;
+  width: 21%;
+  padding-right: 40px;
+}
+.jobViewData .jobRequestToData {
+  display: flex;
+}
+.jobViewData .customerImg {
+  width: 39px;
+  height: 39px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+/*End Job Page CSS */
+/* Start create Job CSS */
+.createJob .filterFormOuter {
+  display: flex;
+  flex-direction: column;
+}
+.timePicker {
+  border: none;
+  background-color: transparent;
+  color: var(--gray);
+  font-size: 14px;
+  padding-top: 2px;
+}
+.jobCreateSelectCustomer {
+  display: inline-block;
+  width: 24%;
+}
+.timePicker:focus {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.createJobSelect {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 75px 10px 6px;
+}
+.createJobSelect:focus {
+  outline: none;
+}
+.createJobSelect:checked {
+  background-color: var(--bgGreen);
+}
+.roleInput {
+  width: 20px;
+  height: 20px;
+  color: var(--greenFade);
+}
+.roleLable {
+  color: var(--greenFade);
+  font-weight: 400;
+}
+/*End create Job CSS */
+/* Start Territory Page CSS */
+.shiftRequestRight {
+  display: flex;
+  gap: 10px;
+  padding-right: 9px;
+}
+.territoryView .heading16 {
+  color: var(--greenFade);
+}
+.territoryView .heading18 {
+  color: var(--green);
+}
+.supervisorList {
+  background-color: #ebf6f6;
+  padding: 15px 24px 15px 15px;
+  border-radius: 10px;
+  display: flex;
+  height: 76px;
+  max-height: 100px;
+  align-items: center;
+  /* overflow-y: auto; */
+}
+.territoryNameData {
+  width: 28%;
+  word-break: break-all;
+  padding-right: 30px;
+}
+.addTerritoryForm .filterFormOuter {
+  padding: 4px 15px;
+}
+.addTerritoryForm .shiftReqDescription {
+  padding: 4px 15px;
+}
+.addTerritoryForm .profileBtn {
+  padding: 10px 40px;
+}
+.territoryTable .territoryName {
+  width: 37%;
+}
+.selectSupervisor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.selectSupervisor .heading14 {
+  color: var(--green);
+}
+.supervisorImg {
+  filter: invert(60%) sepia(71%) saturate(1011%) hue-rotate(147deg)
+    brightness(97%) contrast(112%);
+}
+.supervisorOne {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+}
+.supervisorInput {
+  width: 20px;
+  height: 20px;
+}
+.supervisorInput:checked {
+  background-color: var(--bgGreen) !important;
+}
+/*End Territory Page CSS */
+/* Start Site Page CSS */
+.siteDetails .heading16 {
+  color: var(--greenFade);
+}
+.siteDetails .heading18 {
+  color: var(--green);
+}
+.flagIcon {
+  width: 20px;
+}
+.cityImg {
+  width: 20px;
+}
+.activeAddressImg {
+  width: 20px;
+}
+.siteDetails .locationImg {
+  width: 20px;
+}
+.loactionImg {
+  width: 19px;
+}
+.siteDetailHeading {
+  display: flex;
+  gap: 60px;
+}
+.siteDetailHeading .heading18 {
+  color: var(--green);
+  font-weight: 600;
+}
+.territoryNameHeading {
+  word-break: break-all;
+  width: 26%;
+  padding-right: 20px;
+}
+.siteTerritoryName {
+  word-break: break-all;
+  padding-right: 22px;
+}
+.siteName {
+  display: flex;
+  align-items: center;
+}
+.siteName .heading16 {
+  margin-right: 70px;
+}
+.address .heading16 {
+  margin-right: 56px;
+}
+.territory .heading16 {
+  margin-right: 80px;
+}
+.city .heading16 {
+  margin-right: 114px;
+}
+.address {
+  display: flex;
+  align-items: center;
+}
+.territory {
+  display: flex;
+  align-items: center;
+}
+.city {
+  display: flex;
+  align-items: center;
+}
+.customCheck input[type="checkbox"] {
+  position: relative;
+  border: 2px solid var(--gray);
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+  margin: 0 0.6em 0 0;
+  outline: 0;
+  padding: 0 !important;
+  vertical-align: text-top;
+  height: 20px;
+  width: 20px;
+  -webkit-appearance: none;
+  opacity: 0.5;
+}
+
+.customCheck input[type="checkbox"]:hover {
+  opacity: 1;
+}
+
+.customCheck input[type="checkbox"]:checked {
+  background-color: var(--bgGreen);
+  opacity: 1;
+  border: none;
+}
+.rolesAction {
+  width: 9%;
+}
+.customCheck input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 4px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  margin: -1px -1px 0 -1px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  z-index: 2;
+}
+.supervisorOne .heading14 {
+  width: 20ch;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.supervisorOne label{
+  display: flex ;
+}
+
+.allSupervisor {
+  display: none;
+  position: absolute;
+  width: 100%;
+  max-width: 417px;
+  height: 100%;
+  overflow-y: auto;
+  max-height: 490px;
+}
+
+.allSupervisor.visible {
+  display: block;
+}
+
+.allSupervisor.hidden {
+  display: none;
+}
+.siteNameHeading {
+  width: 23%;
+}
+.cityHeading {
+  width: 23%;
+}
+.backArrowBtn {
+  cursor: pointer;
+}
+/* End Site Page CSS */
+/* Start header CSS */
+.mainContent {
+  height: 100%;
+  max-height: calc(100% - 113px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 5px;
+}
+.staffContent {
+  height: 100%;
+  max-height: calc(100% - 170px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.jobContent {
+  height: 100%;
+  max-height: calc(100% - 229px);
+  overflow-y: auto;
+}
+.jobTable .requestForBtn {
+  word-break: break-all;
+  width: 127px;
+  margin-right: 15px;
+}
+.assignJobTable .locationImg {
+  width: 20px;
+}
+.supervisorContent {
+  height: 100%;
+  max-height: calc(100% - 113px);
+  overflow-y: auto;
+}
+.territoryContent {
+  height: 100%;
+  max-height: calc(100% - 113px);
+  overflow-y: auto;
+}
+.siteContent {
+  height: 100%;
+  max-height: calc(100% - 113px);
+  overflow-y: auto;
+}
+.createJobContent {
+  height: 100%;
+  max-height: calc(100% - 113px);
+  overflow-y: auto;
+}
+.addRoleData {
+  height: 100%;
+  max-height: calc(100% - 113px);
+  overflow-y: auto;
+}
+.rolesContent{
+  height: 100%;
+  max-height: calc(100% - 113px);
+  overflow-y: auto;
+}
+/* .createJob{
+  height: 100%;
+  max-height: calc(100% - 113px);
+  overflow-y: auto;
+} */
+
+.css-t3ipsp-control:hover {
+  border-color: hsl(0, 0%, 70%) !important;
+  border: none !important;
+  background-color: transparent !important;
+}
+.css-t3ipsp-control {
+  box-shadow: none !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+.css-13cymwt-control {
+  background-color: transparent !important;
+  border: none !important;
+  min-height: 16px !important;
+}
+.css-1jqq78o-placeholder {
+  font-size: 14px;
+  color: var(--green);
+  margin: 0 !important;
+  padding-left: 8px !important;
+}
+/*.css-1hb7zxy-IndicatorsContainer{
+  margin: 0 !important;
+}
+.css-1fdsijx-ValueContainer {
+  overflow: initial !important;
+  padding: 0px 0px !important;
+}
+.css-qbdosj-Input {
+  height: 10px!important;
+  
+}
+.css-1f43avz-a11yText-A11yText{
+  overflow: initial !important;
+} */
+
+.addTerritoryForm .css-1p3m7a8-multiValue {
+  border: 1px solid var(--bgGreen) !important;
+  background: transparent !important;
+  color: var(--bgGreen) !important;
+  border-radius: 15px !important;
+  padding: 3px 3px !important;
+  font-weight: 500 !important;
+}
+.addTerritoryForm .css-wsp0cs-MultiValueGeneric {
+  color: var(--bgGreen) !important;
+}
+.addTerritoryForm .css-12a83d4-MultiValueRemove:hover {
+  /* background-color: #FFBDAD; */
+  color: #de350b;
+  border-radius: 15px !important;
+}
+
+.jobCreateSelectCustomer .css-b62m3t-container {
+  border: 1px solid #c6c6c6;
+  border-radius: 10px;
+}
+/* Start Role Page CSS */
+.addSubRoleBtn {
+  background-color: transparent;
+  border: none;
+  color: var(--bgGreen);
+  font-weight: 500;
+}
+.addRoleContent .heading18 {
+  color: var(--gray);
+}
+.addRoleBtns {
+  display: flex;
+  width: 15%;
+}
+.addRoleContent .crossImg {
+  position: absolute;
+  right: 5px;
+}
+/* End Role Page CSS */
+/* start CMS Page Css */
+.CmsContent .heading16 {
+  color: var(--greenFade);
+}
+/* End CMS Page Css */
+/* start Notification Page Css*/
+.rightHeader .heading14 {
+  color: var(--gray);
+}
+.notificationCard {
+  box-shadow: 0px 1px 10px 0px #00000040;
+  padding: 13px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+.notificationArea {
+  border-right: 5px solid var(--bgGreen);
+}
+.notificationCard .heading14 {
+  color: var(--green);
+  font-weight: 400;
+}
+.chatRight {
+  display: flex;
+  position: relative;
+}
+.patientImg {
+  background: #05a1ab;
+  padding: 26px;
+  border-radius: 10px;
+}
+.customerProfile {
+  width: 21px;
+  height: 21px;
+}
+/* End Notification Page Css*/
+/*Start Chat Page Css */
+.chat .heading16 {
+  color: var(--green);
+}
+.unreadCount {
+  color: var(--bgGreen);
+}
+.customerCategory {
+  color: var(--bgGreen);
+}
+.chatCardLeft .heading16 {
+  color: var(--green);
+}
+.chatCardLeft {
+  display: flex;
+  align-items: center;
+}
+.chatCard {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 20px 8px 8px;
+  background: #ffffff;
+  box-shadow: 0px 2px 10px 0px #00000026;
+  border-radius: 15px;
+}
+.cardCustomerImg {
+  width: 48px;
+}
+.cardCustomerImg .customerImg {
+  width: 58px;
+  height: 58px;
+}
+.unreadmessageCount {
+  background: #ffbb00;
+  border-radius: 50px;
+  font-size: 12px;
+  padding: 0px 13px 1px 7px;
+  width: 7px;
+  color: #ffffff;
+}
+
+.chatRight .filterOuter {
+  position: absolute;
+  right: 0;
+  top: 57px;
+}
+.chatRight .filterOuter .heading16 {
+  color: var(--green);
+}
+.selectChat {
+  display: flex;
+  align-items: center;
+}
+.selectChat .heading14 {
+  color: var(--gray);
+}
+.threeDotContent {
+  background: #ffffff;
+  box-shadow: 0px 10px 30px 0px #00000040;
+  border-radius: 10px;
+  padding: 15px;
+  position: absolute;
+  right: 64px;
+  height: 203px;
+  width: 176px;
+}
+element.style {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dotHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dotList {
+  display: flex;
+  padding: 5px;
+  border-bottom: 1px solid #e8e8e8;
+  align-items: center;
+}
+.dotList:last-child {
+  border-bottom: none;
+}
+.dotListMain {
+  margin: 0;
+  padding: 0;
+  padding-top: 16px;
+}
+.dotListMain .heading16 {
+  color: var(--gray);
+}
+.dotHeader .heading16 {
+  color: var(--green);
+}
+.customerImage {
+  width: 40px;
+  height: 40px;
+}
+
+.message {
+  background-color: var(--green);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 400;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+
+.messageRight {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding: 10px;
+}
+
+.messageRight .message {
+  background-color: var(--gray);
+}
+
+.messageLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 10px;
+}
+.time {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.message .time .check {
+  margin-left: 5px;
+  font-size: 16px;
+}
+.input-area {
+  background-color: #e3f8fb;
+  padding: 5px;
+  border-radius: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* position: absolute; */
+  bottom: 21px;
+}
+.input-area input {
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  color: var(--gray);
+  flex-grow: 1;
+  background-color: #e3f8fb;
+}
+.input-area input:focus {
+  border: none;
+  outline: none;
+}
+.input-area button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.input-area button:hover {
+  background-color: var(--green);
+}
+.send-icon {
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.send-icon:hover {
+  background-color: #2980b9;
+}
+.chatData {
+  height: 100%;
+  max-height: calc(100% - 257px);
+  overflow-y: auto;
+}
+.input-area #file-input {
+  display: none;
+}
+.input-area label[htmlFor="file-input"] * {
+  vertical-align: middle;
+  cursor: pointer;
+}
+.input-area label[htmlFor="file-input"] span {
+  margin-left: 10px;
+}
+.inputLabel {
+  border-right: 1px solid #b7d6d8;
+}
+.chatDescription {
+  display: inline-block;
+  width: 100%;
+  max-width: 675px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.chatCardRight {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  justify-content: space-around;
+  /* width: 48%; */
+}
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  color: var(--bs-btn-active-color);
+  background-color: transparent !important;
+  border-color: transparent !important;
+  padding: 0 !important;
+}
+.btn-primary {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.dropdown-toggle::after {
+  content: none !important;
+}
+.chatIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.profileModal .modal-content{
+  background-color: var(--bgGreen) !important;
+  color:  var(--white) !important;
+  padding: 20px;
+  border: none !important;
+  border-radius: 20px !important;
+}
+.profileModal .heading20{
+  color: var(--white) !important;
+}
+.profileModal .heading16{
+  color: var(--white) !important;
+}
+.profileModal .profileModalEmail{
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.dashboard-items{
+    height: 600px;
+    overflow-y: auto;
+}

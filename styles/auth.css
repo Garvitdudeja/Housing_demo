@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+/* Start Common Css */
+:root{
+    --green:#43686A;
+    --gray:#738485;
+    --bgGray:#EBF0F1;
+    --bgGreen:#05A1AB;
+    --white:#ffffff;
+    --black:#000000;
+}
+ul{
+    margin: 0;
+}
+p{
+    margin:0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.heading24{
+    font-size: 24px;
+    font-weight: 700;
+    color:var(--green)
+}
+.text14{
+    font-size: 14px;
+    color:var(--gray);
+}
+/* End Common Css */
+/* Start Login Page Css */
+.authCommonBg{
+    background: url("/images/housing.jpg")repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loginCard{
+    
+    background-color: #fff;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    padding:29px 36px 44px 36px;
+}
+.customInput{
+    width: 100%;
+    border: none;
+    padding: 15px 10px 15px 60px;
+    border-radius: 10px;
+    box-shadow: none !important;
+    outline: none !important;
+    background-color: var(--bgGray);
+    border-radius: 20px;
+    color:var(--bgGreen);
+}
+.customInput::placeholder{
+    font-weight: 14px;
+    color:var(--green);
+}
+.msgIcon {
+    position: absolute;
+    top: 15px;
+    left: 19px;
+}
+.loginCard .logo{
+    margin-bottom: 67px;
+}
+.authBtn{
+    width: 100%;
+    background-color: var(--bgGreen);
+    color:var(--white);
+    border-radius: 15px;
+    padding-block: 13px;
+    text-align: center;
+    border:none;
+    font-weight: 500;
+    font-size: 20px;
+}
+.inactiveBtn{
+    background-color: grey !important;
+}
+.otp input{
+    border: none;
+    border-bottom: 2px solid var(--gray);
+    width: 51px !important;
+    background: transparent;
+    font-size: 30px;
+    font-weight: 500;
+    outline: none !important;
+    margin-right: 20px;
+}
+.otp input:last-child{
+margin-right: 0;
+}
+.otp div{
+    justify-content: center !important;
+    margin-bottom: 50px;
+}
+.backArrow{
+    position: absolute;
+    left: 43px;
+    top: 41px;
+}
+.otp{
+    position: relative;
+}
+.resendBtn{
+    background: transparent;
+    border:none !important;
+    color:var(--bgGreen);
+    font-weight: 700;
+}
+/* End Login Page Css */
+
+/* Common Css */
+
+.swal-footer{
+    text-align: center;
+}
